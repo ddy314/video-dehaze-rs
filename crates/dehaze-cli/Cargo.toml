@@ -1,0 +1,15 @@
+[package]
+name = "dehaze-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "dehaze"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+dehaze-core = { path = "../dehaze-core" }
+image = { version = "0.25", default-features = false, features = ["jpeg", "png"] }
